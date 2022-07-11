@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "813895142138",
+    "project_id": "shaddesignproject",
+    "storage_bucket": "shaddesignproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:813895142138:android:f17281069206edd6065743",
+        "android_client_info": {
+          "package_name": "com.example.shadproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "813895142138-b8hhqg74ml296elqpqke00jkp8d39rj3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCq9azVBF9fOy1-K5USkfBPxhrh-maZMkM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "813895142138-b8hhqg74ml296elqpqke00jkp8d39rj3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
