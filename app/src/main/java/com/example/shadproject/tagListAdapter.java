@@ -2,9 +2,11 @@ package com.example.shadproject;
 
 
 import android.content.Context;
+import android.provider.DocumentsContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -16,10 +18,12 @@ public class tagListAdapter extends RecyclerView.Adapter<tagListAdapter.MyViewHo
 
     Context context;
     ArrayList<String> taglist;
+    private RecyclerItemSelectedListener itemSelectedListener;
 
     public tagListAdapter(Context context, ArrayList<String> taglist) {
         this.context = context;
         this.taglist = taglist;
+        itemSelectedListener = (TellYourStory)context;
 
     }
     @NonNull
@@ -43,13 +47,34 @@ public class tagListAdapter extends RecyclerView.Adapter<tagListAdapter.MyViewHo
         return taglist.size();
     }
 
-    public static class MyViewHolder extends RecyclerView.ViewHolder{
+    public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+
+        LinearLayout RootView;
 
         TextView tag;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             tag = itemView.findViewById(R.id.tagName);
+            RootView = itemView.findViewById(R.id.rootView);
+            RootView.setOnClickListener(this);
+
+
+        }
+
+
+        @Override
+        public void onClick(View view) {
+            itemSelectedListener.onItemSelected(taglist.get(getAdapterPosition()));
 
         }
     }
+
+    public void updatelist(ArrayList<String> newtags) {
+        taglist.clear();
+        taglist.addAll(newtags);
+        notifyDataSetChanged();
+    }
+
+
+
 }
