@@ -7,6 +7,17 @@
     tools:context=".ui.reachout.ReachoutFragment">
 
     <TextView
+        android:id="@+id/reachOutTitle"
+        android:layout_width="208dp"
+        android:layout_height="58dp"
+        android:fontFamily="@font/carrois_gothic_sc"
+        android:text="Reach Out"
+        android:textColor="#BE4444"
+        android:textSize="40sp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
         android:id="@+id/text_reachout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,4 +30,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/TellYourStoryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        android:background="#0000ffff"
+        android:text="Tell Your Story"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </Button>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
