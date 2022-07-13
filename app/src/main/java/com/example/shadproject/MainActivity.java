@@ -19,7 +19,7 @@ import com.example.shadproject.databinding.ActivityMainBinding;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements RecyclerItemSelectedListener {
     boolean signedIn = false;
     private FirebaseAuth mAuth;
     private ActivityMainBinding binding;
@@ -61,4 +61,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onItemSelected(String string) {
+
+    }
 }

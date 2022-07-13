@@ -82,7 +82,7 @@ public class TellYourStory extends AppCompatActivity implements RecyclerItemSele
                     }
                 }
 
-                tagListAdapter adapter = new tagListAdapter(TellYourStory.this, newTags);
+                tagListAdapter adapter = new tagListAdapter(TellYourStory.this, newTags, TellYourStory.this);
                 tagList.setAdapter(adapter);
 
 
@@ -98,7 +98,7 @@ public class TellYourStory extends AppCompatActivity implements RecyclerItemSele
 
 
 
-        tagListAdapter adapter = new tagListAdapter(this, tags);
+        tagListAdapter adapter = new tagListAdapter(this, tags, this);
 
         tagList.setAdapter(adapter);
         tagList.setLayoutManager(new LinearLayoutManager(this));

@@ -20,10 +20,10 @@ public class tagListAdapter extends RecyclerView.Adapter<tagListAdapter.MyViewHo
     ArrayList<String> taglist;
     private RecyclerItemSelectedListener itemSelectedListener;
 
-    public tagListAdapter(Context context, ArrayList<String> taglist) {
+    public tagListAdapter(Context context, ArrayList<String> taglist, RecyclerItemSelectedListener itemSelectedListener) {
         this.context = context;
         this.taglist = taglist;
-        itemSelectedListener = (TellYourStory)context;
+        this.itemSelectedListener = itemSelectedListener;
 
     }
     @NonNull
@@ -33,7 +33,7 @@ public class tagListAdapter extends RecyclerView.Adapter<tagListAdapter.MyViewHo
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(R.layout.taglistitem, parent, false);
 
-        return new tagListAdapter.MyViewHolder(view);
+        return new tagListAdapter.MyViewHolder(view, itemSelectedListener);
     }
 
     @Override
@@ -50,12 +50,13 @@ public class tagListAdapter extends RecyclerView.Adapter<tagListAdapter.MyViewHo
     public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         LinearLayout RootView;
-
+        RecyclerItemSelectedListener itemSelectedListener;
         TextView tag;
-        public MyViewHolder(@NonNull View itemView) {
+        public MyViewHolder(@NonNull View itemView, RecyclerItemSelectedListener itemSelectedListener) {
             super(itemView);
             tag = itemView.findViewById(R.id.tagName);
             RootView = itemView.findViewById(R.id.rootView);
+            this.itemSelectedListener = itemSelectedListener;
             RootView.setOnClickListener(this);
 
 

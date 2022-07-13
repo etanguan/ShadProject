@@ -10,12 +10,14 @@
         android:id="@+id/reachOutTitle"
         android:layout_width="208dp"
         android:layout_height="58dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/carrois_gothic_sc"
         android:text="Reach Out"
         android:textColor="#BE4444"
         android:textSize="40sp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/text_reachout"
@@ -44,5 +46,76 @@
         app:layout_constraintTop_toTopOf="parent">
 
     </Button>
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/reachoutSelectedTags"
+        android:layout_width="345dp"
+
+        android:layout_height="97dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/roundstyle"
+        android:backgroundTint="#F8FAFC"
+        android:radius="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reachoutTags">
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <TextView
+        android:id="@+id/reachoutTags"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/montserrat"
+        android:text="tags: "
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reachOutTitle" />
+
+    <EditText
+        android:id="@+id/reachoutTagSearch"
+        android:layout_width="356dp"
+        android:layout_height="38dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="9dp"
+        android:background="@drawable/roundstyle"
+        android:backgroundTint="#F8FAFC"
+        android:ems="10"
+        android:fontFamily="@font/montserrat"
+        android:hint="Search Tags: "
+        android:inputType="textShortMessage"
+        android:radius="100dp"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.317"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reachoutSelectedTags" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/reachoutTagList"
+        android:layout_width="409dp"
+        android:layout_height="799dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reachoutTagSearch" />
+
+    <Button
+        android:id="@+id/reachOutBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="284dp"
+        android:text="Reach Out"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_reachout" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
