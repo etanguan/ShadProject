@@ -1,6 +1,7 @@
 package com.example.shadproject.ui.reachout;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -12,23 +13,38 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.io.Serializable;
+
+
+import com.example.shadproject.BoostString;
 import com.example.shadproject.Login;
 import com.example.shadproject.MainActivity;
 import com.example.shadproject.R;
 import com.example.shadproject.RecyclerItemSelectedListener;
+import com.example.shadproject.TYSentry;
 import com.example.shadproject.TellYourStory;
 import com.example.shadproject.databinding.FragmentReachoutBinding;
+import com.example.shadproject.helpList;
 import com.example.shadproject.tagListAdapter;
 import com.google.android.material.chip.Chip;
 import com.google.android.material.chip.ChipGroup;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.stream.IntStream;
 
 public class ReachoutFragment extends Fragment implements RecyclerItemSelectedListener {
 
@@ -69,7 +85,56 @@ public class ReachoutFragment extends Fragment implements RecyclerItemSelectedLi
         reachOutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                /*final ArrayList<String> nameList = new ArrayList<>();
+                final ArrayList<String> desList = new ArrayList<>();
+                final ArrayList<ArrayList<String>> tagList = new ArrayList<>();*/
+                final ArrayList<TYSentry> entryList = new ArrayList<>();
+                final FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference reference = database.getReference("HelpList");
+                reference.addValueEventListener(new ValueEventListener() {
+                    @RequiresApi(api = Build.VERSION_CODES.N)
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                            TYSentry item = dataSnapshot.getValue(TYSentry.class);
+                            entryList.add(item);
+                        }
 
+                        //final ArrayList<Integer> index = new ArrayList<>();
+
+                        for (int i = 0; i < entryList.size();i++){
+                            int counter = 0;
+                            for (String tag : selectedTags){
+                                if (entryList.get(i).tags.contains(tag)){
+                                    counter ++;
+
+                                }
+                            }
+                            entryList.get(i).value = counter;
+
+                        }
+
+                        Collections.sort(entryList, new Comparator<TYSentry>() {
+                            @Override
+                            public int compare(TYSentry t0, TYSentry t1) {
+                                return t1.value-t0.value;
+
+                            }
+                        });
+                        Intent intent = new Intent(ReachoutFragment.this.getActivity(), helpList.class);
+                        Bundle args = new Bundle();
+                        args.putSerializable("entryList", (Serializable) entryList);
+                        intent.putExtras(args);
+                        startActivity(intent);
+
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
             }
         });
 

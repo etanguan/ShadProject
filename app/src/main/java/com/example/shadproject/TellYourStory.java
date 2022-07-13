@@ -144,8 +144,9 @@ public class TellYourStory extends AppCompatActivity implements RecyclerItemSele
 
         TYSentry item = new TYSentry(Name, Description, seller, Tags);
 
-        DatabaseReference Ref = ref.child("SellItems");
-        Ref.setValue(item);
+        DatabaseReference Ref = ref.child("HelpList");
+        String itemID = Ref.push().getKey();
+        Ref.child(itemID).setValue(item);
 
         Toast.makeText(TellYourStory.this, "Post Successful", Toast.LENGTH_LONG).show();
 
