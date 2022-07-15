@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Ethan/AndroidStudioProjects/ShadProject/app/src/main/res/drawable/ic_insta.xml" value="0.233" />
         <entry key="..\:/Users/Ethan/AndroidStudioProjects/ShadProject/app/src/main/res/drawable/roundstype.xml" value="0.2445" />
         <entry key="..\:/Users/Ethan/AndroidStudioProjects/ShadProject/app/src/main/res/font/montserrat.xml" value="0.1421875" />
         <entry key="..\:/Users/Ethan/AndroidStudioProjects/ShadProject/app/src/main/res/layout/activity_help_list.xml" value="0.11302083333333333" />
@@ -11,6 +12,7 @@
         <entry key="..\:/Users/Ethan/AndroidStudioProjects/ShadProject/app/src/main/res/layout/activity_register.xml" value="0.264" />
         <entry key="..\:/Users/Ethan/AndroidStudioProjects/ShadProject/app/src/main/res/layout/activity_tell_your_story.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Ethan/AndroidStudioProjects/ShadProject/app/src/main/res/layout/activity_tell_your_story2.xml" value="0.20966183574879227" />
+        <entry key="..\:/Users/Ethan/AndroidStudioProjects/ShadProject/app/src/main/res/layout/contact_popup.xml" value="0.253125" />
         <entry key="..\:/Users/Ethan/AndroidStudioProjects/ShadProject/app/src/main/res/layout/fragment_home.xml" value="0.536" />
         <entry key="..\:/Users/Ethan/AndroidStudioProjects/ShadProject/app/src/main/res/layout/fragment_notifications.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Ethan/AndroidStudioProjects/ShadProject/app/src/main/res/layout/fragment_reachOut.xml" value="0.1" />

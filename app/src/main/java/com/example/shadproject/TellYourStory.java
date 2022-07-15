@@ -25,7 +25,7 @@ import java.util.Arrays;
 
 public class TellYourStory extends AppCompatActivity implements RecyclerItemSelectedListener {
     private RecyclerView tagList;
-    private EditText tagSearch, name, description;
+    private EditText tagSearch, name, description, insta, wechat;
     private Button postBtn;
     private ChipGroup mChipGroup;
     ArrayList<String> selectedTags;
@@ -54,6 +54,9 @@ public class TellYourStory extends AppCompatActivity implements RecyclerItemSele
 
         name = findViewById(R.id.TYSNameInput);
         description = findViewById(R.id.TYSDescriptionInput);
+        insta = findViewById(R.id.InstaInput);
+        wechat = findViewById(R.id.WeChatInput);
+
         postBtn = findViewById(R.id.TYSBtn);
 
         postBtn.setOnClickListener(new View.OnClickListener() {
@@ -141,8 +144,10 @@ public class TellYourStory extends AppCompatActivity implements RecyclerItemSele
         String Description = description.getText().toString().trim();
         ArrayList<String> Tags = selectedTags;
 
+        String Insta = insta.getText().toString().trim();
+        String WeChat = wechat.getText().toString().trim();
 
-        TYSentry item = new TYSentry(Name, Description, seller, Tags);
+        TYSentry item = new TYSentry(Name, Description, seller, Tags, Insta, WeChat);
 
         DatabaseReference Ref = ref.child("HelpList");
         String itemID = Ref.push().getKey();
