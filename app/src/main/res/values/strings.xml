@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">ShadProject</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_reachout">reachOut</string>
+    <string name="title_dashboard">Stories</string>
+    <string name="title_reachout">Reach Out</string>
     <string name="title_activity_tell_your_story">TellYourStory</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>

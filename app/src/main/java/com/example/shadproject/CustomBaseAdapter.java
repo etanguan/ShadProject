@@ -23,6 +23,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class CustomBaseAdapter extends BaseAdapter {
     Context context;
@@ -72,7 +73,12 @@ public class CustomBaseAdapter extends BaseAdapter {
 
 
         if (i < entryList.size()) {
-            name.setText(entryList.get(i).name);
+            if (!Objects.equals(entryList.get(i).name, "")) {
+                name.setText(entryList.get(i).name);
+            }
+            else{
+                name.setText("Anonymous");
+            }
             description.setText(entryList.get(i).description);
             String tagString = String.join(", ", entryList.get(i).tags);
             tag.setText(tagString);

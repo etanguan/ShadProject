@@ -11,7 +11,6 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.chip.Chip;
@@ -57,7 +56,7 @@ public class TellYourStory extends AppCompatActivity implements RecyclerItemSele
         insta = findViewById(R.id.InstaInput);
         wechat = findViewById(R.id.WeChatInput);
 
-        postBtn = findViewById(R.id.TYSBtn);
+        postBtn = findViewById(R.id.storyTYSBtn);
 
         postBtn.setOnClickListener(new View.OnClickListener() {
             @Override
