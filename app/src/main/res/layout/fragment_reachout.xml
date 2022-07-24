@@ -8,14 +8,14 @@
 
     <TextView
         android:id="@+id/reachOutTitle"
-        android:layout_width="208dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="8dp"
+        android:layout_width="166dp"
+        android:layout_height="126dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="40dp"
-        android:fontFamily="@font/carrois_gothic_sc"
+        android:fontFamily="@font/titlefonts"
         android:text="Reach Out"
-        android:textColor="#BE4444"
-        android:textSize="40sp"
+        android:textColor="#6CBC2f"
+        android:textSize="50sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -37,11 +37,11 @@
         android:id="@+id/TellYourStoryButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="16dp"
         android:background="#0000ffff"
         android:text="Tell Your Story"
-        android:textColor="#000000"
+        android:textColor="#5A8991"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -111,7 +111,7 @@
         android:id="@+id/reachOutBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="168dp"
+        android:layout_marginTop="244dp"
         android:text="Reach Out"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

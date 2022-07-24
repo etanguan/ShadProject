@@ -13,8 +13,11 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.shadproject.Login;
 import com.example.shadproject.dailyCheckIn;
 import com.example.shadproject.databinding.FragmentHomeBinding;
+import com.example.shadproject.storyTellYourStory;
+import com.example.shadproject.ui.dashboard.DashboardFragment;
 import com.example.shadproject.ui.reachout.ReachoutFragment;
 import com.google.firebase.auth.FirebaseAuth;
 import android.content.SharedPreferences;
@@ -42,10 +45,10 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(HomeFragment.this.getActivity(), Login.class);
+                startActivity(intent);
             }
         });
-        final TextView textView = binding.textHome;
-        homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
 
 
 

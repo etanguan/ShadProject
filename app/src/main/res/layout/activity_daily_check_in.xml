@@ -8,13 +8,13 @@
 
     <TextView
         android:id="@+id/reachOutTitle"
-        android:layout_width="285dp"
-        android:layout_height="43dp"
+        android:layout_width="279dp"
+        android:layout_height="47dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:fontFamily="@font/carrois_gothic_sc"
+        android:fontFamily="@font/titlefonts"
         android:text="Check In"
-        android:textColor="#BE4444"
+        android:textColor="#6CBC2f"
         android:textSize="40sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

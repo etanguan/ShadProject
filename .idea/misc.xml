@@ -6,9 +6,10 @@
         <entry key="..\:/Users/Ethan/AndroidStudioProjects/ShadProject/app/src/main/res/drawable/ic_insta.xml" value="0.233" />
         <entry key="..\:/Users/Ethan/AndroidStudioProjects/ShadProject/app/src/main/res/drawable/roundstype.xml" value="0.2445" />
         <entry key="..\:/Users/Ethan/AndroidStudioProjects/ShadProject/app/src/main/res/font/montserrat.xml" value="0.1421875" />
-        <entry key="..\:/Users/Ethan/AndroidStudioProjects/ShadProject/app/src/main/res/layout/activity_daily_check_in.xml" value="0.25" />
-        <entry key="..\:/Users/Ethan/AndroidStudioProjects/ShadProject/app/src/main/res/layout/activity_help_list.xml" value="0.11302083333333333" />
-        <entry key="..\:/Users/Ethan/AndroidStudioProjects/ShadProject/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Ethan/AndroidStudioProjects/ShadProject/app/src/main/res/font/titlefonts.xml" value="0.2833333333333333" />
+        <entry key="..\:/Users/Ethan/AndroidStudioProjects/ShadProject/app/src/main/res/layout/activity_daily_check_in.xml" value="0.2" />
+        <entry key="..\:/Users/Ethan/AndroidStudioProjects/ShadProject/app/src/main/res/layout/activity_help_list.xml" value="0.2" />
+        <entry key="..\:/Users/Ethan/AndroidStudioProjects/ShadProject/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/Ethan/AndroidStudioProjects/ShadProject/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/Ethan/AndroidStudioProjects/ShadProject/app/src/main/res/layout/activity_register.xml" value="0.264" />
         <entry key="..\:/Users/Ethan/AndroidStudioProjects/ShadProject/app/src/main/res/layout/activity_story_tell_your_story.xml" value="0.25416666666666665" />
@@ -17,10 +18,11 @@
         <entry key="..\:/Users/Ethan/AndroidStudioProjects/ShadProject/app/src/main/res/layout/contact_popup.xml" value="0.253125" />
         <entry key="..\:/Users/Ethan/AndroidStudioProjects/ShadProject/app/src/main/res/layout/fragment_dashboard.xml" value="0.25" />
         <entry key="..\:/Users/Ethan/AndroidStudioProjects/ShadProject/app/src/main/res/layout/fragment_first.xml" value="0.25" />
-        <entry key="..\:/Users/Ethan/AndroidStudioProjects/ShadProject/app/src/main/res/layout/fragment_home.xml" value="0.536" />
+        <entry key="..\:/Users/Ethan/AndroidStudioProjects/ShadProject/app/src/main/res/layout/fragment_home.xml" value="0.264" />
         <entry key="..\:/Users/Ethan/AndroidStudioProjects/ShadProject/app/src/main/res/layout/fragment_notifications.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Ethan/AndroidStudioProjects/ShadProject/app/src/main/res/layout/fragment_reachOut.xml" value="0.1" />
         <entry key="..\:/Users/Ethan/AndroidStudioProjects/ShadProject/app/src/main/res/layout/fragment_reachout.xml" value="0.264" />
+        <entry key="..\:/Users/Ethan/AndroidStudioProjects/ShadProject/app/src/main/res/layout/fragment_second.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Ethan/AndroidStudioProjects/ShadProject/app/src/main/res/layout/helplistitem.xml" value="0.264" />
         <entry key="..\:/Users/Ethan/AndroidStudioProjects/ShadProject/app/src/main/res/layout/story_list_item.xml" value="0.2" />
         <entry key="..\:/Users/Ethan/AndroidStudioProjects/ShadProject/app/src/main/res/layout/taglistitem.xml" value="0.253125" />
